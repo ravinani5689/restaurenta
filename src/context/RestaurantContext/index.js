@@ -1,5 +1,13 @@
-import {createContext} from 'react'
+import { createContext } from 'react';
 
-const RestaurantContext = createContext(null)
+const RestaurantContext = createContext({
+  apiResponse: { status: 'INITIAL', data: null, errorMsg: null },
+  cartList: [],
+  addCartItem: () => {},
+  removeCartItem: () => {},
+  incrementCartItemQuantity: () => {},
+  decrementCartItemQuantity: () => {},
+  removeAllCartItems: () => {},
+});
 
-export default RestaurantContext
+export default RestaurantContext;
